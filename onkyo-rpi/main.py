@@ -11,13 +11,14 @@ a9150Commands = {
     "mute" : [5],
     "D1" : [32],
     "D2" : [224],
-    "D3" : [224,213], # Switch to D2 and go src up
-    "D4" : [224, 213, 213],  # Switch to D2 and go src up
-    "L1" : [224, 213, 213, 213],  # Switch to D2 and go src up
-    "L2" : [224, 213, 213, 213, 213],  # Switch to D2 and go src up
-    "L3" : [32, 214, 214, 214, 214],  # Switch to D1 and go src down
-    "L4" : [32, 214, 214, 214],  # Switch to D1 and go src down
-    "phono" : [32, 214, 214],  # Switch to D1 and go src down
+    "D3" : [224,213],
+    "D4" : [224, 213, 213],
+    "L1" : [224, 213, 213, 213],
+    "L2" : [224, 213, 213, 213, 213],
+    "L3" : [224, 213, 213, 213, 213, 213],
+    "L4" : [224, 213, 213, 213, 213, 213, 213],
+    "phono" : [224, 213, 213, 213, 213, 213, 213, 213],
+    # we do it like this because every time we go over main some relays pop
     "main-in" : [32, 214],  # Switch to D1 and go src down
 }
 
