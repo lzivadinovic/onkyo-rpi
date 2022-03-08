@@ -39,8 +39,9 @@ class OnkyoCommand():
             self._create_trailer_wave()
 
         self.pi.wave_add_generic(wave_elements)
+        wave = self.pi.wave_create()
         for i in range(count):
-            self.pi.wave_send_once(self.pi.wave_create())
+            self.pi.wave_send_once(wave)
             # Wait until wave is sent then repeat
             while self.pi.wave_tx_busy():
                 time.sleep(0.1)
