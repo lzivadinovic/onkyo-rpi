@@ -5,21 +5,23 @@ import pigpio
 from command import OnkyoCommand
 
 a9150Commands = {
-    "V+" : [2],
-    "V-" : [3],
+    "vu" : [2],
+    "vd" : [3],
     "pwr" : [4],
     "mute" : [5],
-    "D1" : [32],
-    "D2" : [224],
-    "D3" : [224,213],
-    "D4" : [224, 213, 213],
-    "L1" : [224, 213, 213, 213],
-    "L2" : [224, 213, 213, 213, 213],
-    "L3" : [224, 213, 213, 213, 213, 213],
-    "L4" : [224, 213, 213, 213, 213, 213, 213],
+    "srcu" : [213],
+    "srcd" : [214],
+    "d1" : [32],
+    "d2" : [224],
+    "d3" : [224,213],
+    "d4" : [224, 213, 213],
+    "l1" : [224, 213, 213, 213],
+    "l2" : [224, 213, 213, 213, 213],
+    "l3" : [224, 213, 213, 213, 213, 213],
+    "l4" : [224, 213, 213, 213, 213, 213, 213],
     "phono" : [224, 213, 213, 213, 213, 213, 213, 213],
     # we do it like this because every time we go over main some relays pop
-    "main-in" : [32, 214],  # Switch to D1 and go src down
+    "main" : [32, 214],  # Switch to D1 and go src down
 }
 
 def parse_args():
@@ -33,7 +35,7 @@ def parse_args():
     # Send command or message
     group = parser.add_mutually_exclusive_group()
 
-    group.add_argument('--command', type=str, nargs='?',
+    group.add_argument('--command', type=lambda x: x.lower(), nargs='?',
                         help="Exec specific command for A-9150")
 
     group.add_argument('--message', type=lambda x: [int(x, 0)], nargs='?',

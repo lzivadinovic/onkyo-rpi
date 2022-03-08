@@ -7,7 +7,9 @@ The script ```main.py``` accepts a message as parameter from 0-4095 as hex or in
 Example:
 ```bash
 # sends turn off message to device
-python main.py 0x1AE
+python main.py --message 0x1AE
+# To send switch to D1
+python main.py --command D1
 # you can additionally pass a gpio port as parameter
 python main.py --gpio 25 0x1AE
 ```
@@ -86,38 +88,87 @@ python scan.py --delay 1
         <tr>
             <td> <b>Message</b> </td>
             <td> <b>Action</b> </td>
+            <td> <b>Command</b> </td>
         </tr>
         <tr>
             <td> 0x002 </td>
             <td> Volume up </td>
+            <td> vu </td>
         </tr>
         <tr>
             <td> 0x003 </td>
             <td> Volume down </td>
+            <td> vd </td>
         </tr>
         <tr>
             <td> 0x004 </td>
             <td> Power Off </td>
+            <td> pwr </td>
         </tr>
         <tr>
             <td> 0x005 </td>
             <td> Mute/unmute </td>
+            <td> mute </td>
         </tr>
         <tr>
             <td> 0x020 </td>
             <td> Switch to D1 </td>
+            <td> d1 </td>
         </tr>
         <tr>
             <td> 0x0E0 </td>
             <td> Switch to D2 </td>
+            <td> d2 </td>
+        </tr>
+        <tr>
+            <td>  </td>
+            <td> Switch to D3 </td>
+            <td> d3 </td>
+        </tr>
+        <tr>
+            <td>  </td>
+            <td> Switch to D4 </td>
+            <td> d4 </td>
+        </tr>
+        <tr>
+            <td>  </td>
+            <td> Switch to L1 </td>
+            <td> l1 </td>
+        </tr>
+        <tr>
+            <td>  </td>
+            <td> Switch to L2 </td>
+            <td> l2 </td>
+        </tr>
+        <tr>
+            <td>  </td>
+            <td> Switch to L3 </td>
+            <td> l3 </td>
+        </tr>
+        <tr>
+            <td>  </td>
+            <td> Switch to L4 </td>
+            <td> l4 </td>
+        </tr>
+        <tr>
+            <td>  </td>
+            <td> Switch to phono </td>
+            <td> phono </td>
+        </tr>
+        <tr>
+            <td>  </td>
+            <td> Switch to main-in </td>
+            <td> main </td>
         </tr>
         <tr>
             <td> 0x0D5 </td>
             <td> Source up </td>
+            <td> srcu </td>
         </tr>
         <tr>
             <td> 0x0D6 </td>
             <td> Source down </td>
+            <td> srcd </td>
         </tr>
     </tbody>
 </table>
