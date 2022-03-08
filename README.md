@@ -26,7 +26,7 @@ python scan.py --delay 1
 ```
 
 # Known messages
-I am using an **Onkyo TX-SR500E AV Receiver** and following messages lead to actions on the device.
+**Onkyo TX-SR500E AV Receiver** and following messages lead to actions on the device.
 <table>
     <tbody>
         <tr>
@@ -76,6 +76,48 @@ I am using an **Onkyo TX-SR500E AV Receiver** and following messages lead to act
         <tr>
             <td> 0x1AF </td>
             <td> turn on and switch to mode VIDEO2 </td>
+        </tr>
+    </tbody>
+</table>
+
+**Onkyo A-9150 stereo amplifier** and following messages lead to actions on the device.
+<table>
+    <tbody>
+        <tr>
+            <td> <b>Message</b> </td>
+            <td> <b>Action</b> </td>
+        </tr>
+        <tr>
+            <td> 0x002 </td>
+            <td> Volume up </td>
+        </tr>
+        <tr>
+            <td> 0x003 </td>
+            <td> Volume down </td>
+        </tr>
+        <tr>
+            <td> 0x004 </td>
+            <td> Power Off </td>
+        </tr>
+        <tr>
+            <td> 0x005 </td>
+            <td> Mute/unmute </td>
+        </tr>
+        <tr>
+            <td> 0x020 </td>
+            <td> Switch to D1 </td>
+        </tr>
+        <tr>
+            <td> 0x0E0 </td>
+            <td> Switch to D2 </td>
+        </tr>
+        <tr>
+            <td> 0x0D5 </td>
+            <td> Source up </td>
+        </tr>
+        <tr>
+            <td> 0x0D6 </td>
+            <td> Source down </td>
         </tr>
     </tbody>
 </table>
